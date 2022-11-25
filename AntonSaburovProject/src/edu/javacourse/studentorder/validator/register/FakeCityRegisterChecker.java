@@ -55,4 +55,3 @@ public class FakeCityRegisterChecker implements CityRegisterChecker {
         return res;
     }
 }
-// test git status
