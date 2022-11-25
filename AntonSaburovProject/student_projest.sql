@@ -85,4 +85,5 @@ CREATE TABLE jc_student_child(
     PRIMARY KEY(student_child_id),
     FOREIGN KEY(c_street_code) REFERENCES jc_street(street_code) ON DELETE RESTRICT,
     FOREIGN KEY(c_register_office_id) REFERENCES jc_register_office(r_office_id) ON DELETE RESTRICT
+
 );
