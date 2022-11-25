@@ -1,16 +1,22 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.wedding;
+
+import edu.javacourse.studentorder.domain.wedding.Street;
 
 public class Address {
+
     private String postCode;
     private Street street;
     private String building;
     private String extension;  // корпус
     private String apartment;  // квартира
 
-    public Address(String s, Street s1, String s2, String s3, String s4) {
+    public Address(String postCode, Street street, String building, String extension, String apartment) {
+        this.postCode = postCode;
+        this.street = street;
+        this.building = building;
+        this.extension = extension;
+        this.apartment = apartment;
     }
-
-
 
     public String getPostCode() {
         return postCode;
@@ -50,5 +56,16 @@ public class Address {
 
     public void setApartment(String apartment) {
         this.apartment = apartment;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "postCode='" + postCode + '\'' +
+                ", street=" + street +
+                ", building='" + building + '\'' +
+                ", extension='" + extension + '\'' +
+                ", apartment='" + apartment + '\'' +
+                '}';
     }
 }

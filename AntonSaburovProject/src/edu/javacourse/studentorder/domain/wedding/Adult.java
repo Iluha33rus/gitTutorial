@@ -1,19 +1,20 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.wedding;
 
 import java.time.LocalDate;
 
 public class Adult extends Person {
     private String passportSeria;
+
     private String passportNumber;
     private LocalDate issueDate;    // дата выдачи
-    private String issueDepartment; // место выдачи
+    private PassportOffice issueDepartment; // место выдачи
     private String university;
     private String studentID;
+
 
     public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         super(surName, givenName, patronymic, dateOfBirth);
     }
-
 
     public String getPassportSeria() {
         return passportSeria;
@@ -39,11 +40,11 @@ public class Adult extends Person {
         this.issueDate = issueDate;
     }
 
-    public String getIssueDepartment() {
+    public PassportOffice getIssueDepartment() {
         return issueDepartment;
     }
 
-    public void setIssueDepartment(String issueDepartment) {
+    public void setIssueDepartment(PassportOffice issueDepartment) {
         this.issueDepartment = issueDepartment;
     }
 

@@ -1,11 +1,11 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.wedding;
 
 import java.time.LocalDate;
 
-public class Child extends Person{
+public class Child extends Person {
     private String certificateNumber; // свидетельство о рождении
     private LocalDate issueDate; // дата выдачи
-    private String issueDepartment; // кто выдал
+    private RegisterOffice issueDepartment; // кто выдал
 
     public Child(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         super(surName, givenName, patronymic, dateOfBirth);
@@ -27,11 +27,11 @@ public class Child extends Person{
         this.issueDate = issueDate;
     }
 
-    public String getIssueDepartment() {
+    public RegisterOffice getIssueDepartment() {
         return issueDepartment;
     }
 
-    public void setIssueDepartment(String issueDepartment) {
+    public void setIssueDepartment(RegisterOffice issueDepartment) {
         this.issueDepartment = issueDepartment;
     }
 }

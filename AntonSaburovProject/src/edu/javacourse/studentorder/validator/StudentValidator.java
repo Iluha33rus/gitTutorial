@@ -1,7 +1,7 @@
 package edu.javacourse.studentorder.validator;
 
 import edu.javacourse.studentorder.domain.AnswerChekStudent;
-import edu.javacourse.studentorder.domain.StudentOrder;
+import edu.javacourse.studentorder.domain.wedding.StudentOrder;
 
 public class StudentValidator {
     public AnswerChekStudent chekStudent(StudentOrder so) {

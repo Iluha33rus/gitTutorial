@@ -1,9 +1,11 @@
 package edu.javacourse.studentorder.validator;
 
-import edu.javacourse.studentorder.domain.*;
 import edu.javacourse.studentorder.domain.register.AnswerCityRegister;
 import edu.javacourse.studentorder.domain.register.AnswerCityRegisterItem;
 import edu.javacourse.studentorder.domain.register.CityRegisterResponse;
+import edu.javacourse.studentorder.domain.wedding.Child;
+import edu.javacourse.studentorder.domain.wedding.Person;
+import edu.javacourse.studentorder.domain.wedding.StudentOrder;
 import edu.javacourse.studentorder.exception.CityRegisterException;
 import edu.javacourse.studentorder.exception.TransportException;
 import edu.javacourse.studentorder.validator.register.CityRegisterChecker;

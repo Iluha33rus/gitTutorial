@@ -1,26 +1,53 @@
-package edu.javacourse.studentorder.domain;
+package edu.javacourse.studentorder.domain.wedding;
 
 
+
+import edu.javacourse.studentorder.domain.StudentOrderStatus;
+import edu.javacourse.studentorder.domain.wedding.Adult;
+import edu.javacourse.studentorder.domain.wedding.Child;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class StudentOrder {
     private long studentOrderId;
+    private LocalDateTime studentOrderDate;
+    private StudentOrderStatus studentOrderStatus;
+
+
+
     private Adult husband;
     private Adult wife;
     private List<Child> children;
 
     String marriageCertificateId;
     LocalDate marriageDate;
-    String marriageOffice;
+    RegisterOffice marriageOffice;
+
 
     public void addChild(Child child) {
         if (children == null) {
             children = new ArrayList<>(5);
         }
         children.add(child);
+    }
+
+    public LocalDateTime getStudentOrderDate() {
+        return studentOrderDate;
+    }
+
+    public void setStudentOrderDate(LocalDateTime studentOrderDate) {
+        this.studentOrderDate = studentOrderDate;
+    }
+
+    public StudentOrderStatus getStudentOrderStatus() {
+        return studentOrderStatus;
+    }
+
+    public void setStudentOrderStatus(StudentOrderStatus studentOrderStatus) {
+        this.studentOrderStatus = studentOrderStatus;
     }
 
     public List<Child> getChildren() {
@@ -43,11 +70,16 @@ public class StudentOrder {
         this.marriageDate = marriageDate;
     }
 
-    public String getMarriageOffice() {
+
+    public void setChildren(List<Child> children) {
+        this.children = children;
+    }
+
+    public RegisterOffice getMarriageOffice() {
         return marriageOffice;
     }
 
-    public void setMarriageOffice(String marriageOffice) {
+    public void setMarriageOffice(RegisterOffice marriageOffice) {
         this.marriageOffice = marriageOffice;
     }
 

@@ -1,9 +1,6 @@
 package edu.javacourse.studentorder.domain.register;
 
-import edu.javacourse.studentorder.domain.Person;
-
-import java.util.ArrayList;
-import java.util.List;
+import edu.javacourse.studentorder.domain.wedding.Person;
 
 public class AnswerCityRegisterItem {
 

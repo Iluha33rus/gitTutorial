@@ -1,9 +1,9 @@
 package edu.javacourse.studentorder.validator.register;
 
-import edu.javacourse.studentorder.domain.Adult;
-import edu.javacourse.studentorder.domain.Child;
+import edu.javacourse.studentorder.domain.wedding.Adult;
+import edu.javacourse.studentorder.domain.wedding.Child;
 import edu.javacourse.studentorder.domain.register.CityRegisterResponse;
-import edu.javacourse.studentorder.domain.Person;
+import edu.javacourse.studentorder.domain.wedding.Person;
 import edu.javacourse.studentorder.exception.CityRegisterException;
 import edu.javacourse.studentorder.exception.TransportException;
 
@@ -55,4 +55,3 @@ public class FakeCityRegisterChecker implements CityRegisterChecker {
         return res;
     }
 }
-// test git status
