@@ -17,6 +17,10 @@ public abstract class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Person() {
+
+    }
+
     public String getSurName() {
         return surName;
     }

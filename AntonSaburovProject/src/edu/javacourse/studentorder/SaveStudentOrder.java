@@ -5,6 +5,7 @@ import edu.javacourse.studentorder.dao.StudentOrderDao;
 import edu.javacourse.studentorder.domain.wedding.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class SaveStudentOrder {
     public static void main(String[] args) throws Exception {
@@ -43,8 +44,11 @@ public class SaveStudentOrder {
         StudentOrder s = buildStudentOrder(1);
         StudentOrderDao dao = new StudentDaoImpl();
         Long id = dao.saveStudentOrder(s);
-        System.out.println(id);
-
+      //  System.out.println(id);
+       List<StudentOrder> soList = dao.getStudentOrders();
+       for(StudentOrder so: soList){
+         //  System.out.println(so.getStudentOrderId());
+       }
 
 
 
@@ -81,17 +85,20 @@ public class SaveStudentOrder {
         husband.setIssueDate(LocalDate.of(2017, 9, 15));
         PassportOffice po1 = new PassportOffice(1L, "", "");
         husband.setIssueDepartment(po1);
-        husband.setStudentID("" + (100000 + id));
         husband.setAddress(address);
+        husband.setUniversity(new University(1L,""));
+        husband.setStudentID("H12345");
         //жена
         Adult wife = new Adult("Петрова", "Вероника", "Алексеевна", LocalDate.of(1998, 3, 12));
         wife.setPassportSeria("" + (2000 + id));
         wife.setPassportNumber("" + (200000 + id));
         wife.setIssueDate(LocalDate.of(2018, 4, 5));
-        PassportOffice po2 = new PassportOffice(1L, "", "");
+        PassportOffice po2 = new PassportOffice(2L, "", "");
         wife.setIssueDepartment(po2);
-        wife.setStudentID("" + (200000 + id));
         wife.setAddress(address);
+        wife.setUniversity(new University(2L,""));
+        wife.setStudentID("W12345");
+
         //ребенок
         Child child1 = new Child("Петрова", "Ирина", "Викторовна", LocalDate.of(2018, 6, 29));
         child1.setCertificateNumber("" + (300000 + id));
@@ -100,7 +107,7 @@ public class SaveStudentOrder {
         child1.setIssueDepartment(ro2);
         child1.setAddress(address);
         // ребёнок
-        Child child2 = new Child("Петрова", "Евгений", "Викторович", LocalDate.of(2018, 6, 29));
+        Child child2 = new Child("Петров", "Евгений", "Викторович", LocalDate.of(2018, 6, 29));
         child2.setCertificateNumber("" + (400000 + id));
         child2.setIssueDate(LocalDate.of(2018, 6, 11));
         RegisterOffice ro3 = new RegisterOffice(1L, "", " ");

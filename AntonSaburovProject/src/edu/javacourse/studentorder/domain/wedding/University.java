@@ -1,4 +1,4 @@
-package edu.javacourse.studentorder;
+package edu.javacourse.studentorder.domain.wedding;
 
 public class University {
     private Long universityId;
